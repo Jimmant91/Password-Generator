@@ -20,3 +20,21 @@ passwordCriteria = {
   numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 };
 
+// Variables within the function that can be renamed depending on placement within function //
+var create;
+
+// Defining function: generatePassword //
+function generatePassword () {
+  var create = Number(prompt("Please provide a number between 8 and 128 for the number of characters you would like your password to be."))
+};
+  function decision () {
+    if (create < 8 || create > 128) {
+      create = Number(prompt("You must choose a number between 8 and 128"))
+    }
+    else if (!create) {
+      alert("You must create a password")
+    }
+    else (create >= 8 || create <= 128) {
+      
+    }
+  }
