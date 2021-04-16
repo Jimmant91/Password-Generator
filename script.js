@@ -17,8 +17,9 @@ generateBtn.addEventListener("click", writePassword);
 passwordCriteria = {
   specialChars: ['"', '!', '#', '%', '$', '%', '&', '(', ')', '*', '+', "'", ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '^', '+', '`', '{' , '}', '|', '~' ],
   letters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
-  numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-};
+  numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+}
+
 
 // Uppercase Letters //
 var upperLetters = passwordCriteria.letters.map(letters => letters.toUpperCase());
@@ -48,7 +49,7 @@ function generatePassword () {
   else {
     confNum = confirm("Would you like to include numbers?"),
     confUpper = confirm("Would you like to incude uppercase letters?"),
-    confLower = confirm("Would you like to include lowercase leters?"),
+    confLower = confirm("Would you like to include lowercase letters?"),
     confChar = confirm("Would you like to include special characters?")
   };
 
@@ -58,7 +59,15 @@ function generatePassword () {
     generatePassword ();
   }
   else if (confNum && confUpper && confLower && confChar) {
-    selections = passwordCritera.specialChars.join() + passwordCriteria.letters.join() + passwordCriteria.numbers.join() + upperLetters.join()
-    console.log(selection)
-  }
+    selections = passwordCriteria.specialChars + passwordCriteria.letters + passwordCriteria.numbers + upperLetters
+  };
+
+  var password = []
+ 
+  for (var i = 0; i < create; i++) {
+    var selectionsMade = selections[Math.floor(Math.random() * selections.length)];
+    password.push(selectionsMade)
+  };
+
+  return password
 }
