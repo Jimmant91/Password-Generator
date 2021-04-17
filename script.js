@@ -58,7 +58,7 @@ function generatePassword () {
     generatePassword ();
   }
 
-  // All combinations of selections for else if...I know there is a way to push each selection to an array, but I could use a suggestion getting that code correct //
+  // All combinations of selections for else if...I know there is a way to push each selection to an array, but I could use a suggestion for using that code correctly //
   
   else if (confNum && confUpper && confLower && confChar) {
     selections = passwordCriteria.specialChars + passwordCriteria.letters + passwordCriteria.numbers + upperLetters
@@ -131,7 +131,7 @@ function generatePassword () {
     yourNewPassword.push(selectionsMade)
   };
 
-  // Removing those commas! //
+  // Removing those commas...and making a single string! //
   var password = yourNewPassword.join("")
 
   return password
